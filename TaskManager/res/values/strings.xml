@@ -8,5 +8,6 @@
     <string name="unsaved_changes_title">Unsaved Changes</string>
     <string name="unsaved_changes_msg">There are unsaved changes to add task. What to do?</string>
     <string name="discard">Discard</string>
-    
-</resources>
+    <string name="no_tasks">No task available</string>
+    <string name="remove_task">Remove Completed Tasks</string>
+ </resources>

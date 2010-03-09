@@ -51,13 +51,16 @@ public class ViewTasksActivity extends ListActivity {
 	}
 
 	protected void removeCompletedTasks() {
-		adapter.removeCompletedTasks();
-
+		Long[] ids =adapter.removeCompletedTasks();
+		app.deleteTasks(ids);
 	}
 
 	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {
 		super.onListItemClick(l, v, position, id);
 		adapter.toggleTaskAtPosition(position);
+		Task t = adapter.getItem(position);
+		app.saveTask(t);
+
 	}
 }
